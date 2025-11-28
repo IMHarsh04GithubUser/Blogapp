@@ -65,7 +65,7 @@ const Header = () => {
         </div>
         <div className="text-center my-8">
           <h1 className="text-3xl sm:text-5xl font-medium italic text-red-400">Latest-Blogs</h1>
-          <p className="mt-10 max-w-[740px] m-auto text-xs sm:text-base ">
+          <p className={dark?'text-gray-500 mt-10 max-w-[740px] m-auto text-xs sm:text-base':'mt-10 max-w-[740px] m-auto text-xs sm:text-base'}>
             Step into the world where creativity meets simplicity. Our blog app
             is designed for creators who want to express without limits—fast
             publishing, clean design, and a seamless writing experience.
