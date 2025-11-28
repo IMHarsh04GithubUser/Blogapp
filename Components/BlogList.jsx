@@ -3,9 +3,11 @@ import { blog_data } from '@/Assets/assets'
 import React, { useEffect, useState } from 'react'
 import BlogItem from './BlogItem'
 import axios from 'axios';
+import { useContext } from 'react';
+import { ThemeContext } from '../app/ThemeContext';
 
 const BlogList = () => {
-
+    const { dark} = useContext(ThemeContext);
     const [menu,setMenu] = useState("All");
     const [blogs,setBlogs] = useState([]);
 
@@ -21,11 +23,11 @@ const BlogList = () => {
 
   return (
     <div>
-      <div className='flex justify-center gap-6 my-10'>
-        <button onClick={()=>setMenu('All')} className={menu==="All"?'bg-black text-white py-1 px-4 rounded-sm':""}>All</button>
-        <button onClick={()=>setMenu('Technology')} className={menu==="Technology"?'bg-black text-white py-1 px-4 rounded-sm':""}>Technology</button>
-        <button onClick={()=>setMenu('Startup')} className={menu==="Startup"?'bg-black text-white py-1 px-4 rounded-sm':""}>Startup</button>
-        <button onClick={()=>setMenu('Lifestyle')} className={menu==="Lifestyle"?'bg-black text-white py-1 px-4 rounded-sm':""}>Lifestyle</button>
+      <div className={dark?'flex justify-center gap-6 my-10 text-white':'flex justify-center gap-6 my-10'}>
+        <button onClick={()=>setMenu('All')} className={menu==="All"?'bg-black text-white py-1 px-4 rounded-sm hover:scale-110':""}>All</button>
+        <button onClick={()=>setMenu('Technology')} className={menu==="Technology"?'bg-black text-white py-1 px-4 rounded-sm hover:scale-110':"hover:scale-110"}>Technology</button>
+        <button onClick={()=>setMenu('Startup')} className={menu==="Startup"?'bg-black text-white py-1 px-4 rounded-sm hover:scale-110':"hover:scale-110"}>Startup</button>
+        <button onClick={()=>setMenu('Lifestyle')} className={menu==="Lifestyle"?'bg-black text-white py-1 px-4 rounded-sm hover:scale-110':"hover:scale-110"}>Lifestyle</button>
       </div>
       <div className='flex flex-wrap justify-around gap-1 gap-y-10 mb-16 xl:mx-24'>
         {blogs.filter((item)=> menu==="All"?true:item.category===menu).map((item,index)=>{
