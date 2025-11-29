@@ -9,10 +9,13 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import { useContext } from "react";
 import {ThemeContext} from '@/app/ThemeContext'
 import '@/Styles/header.css'
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Header = () => {
   const {dark,handlebgdark,handlebglight} = useContext(ThemeContext)
   const [email, setEmail] = useState("");
+  const router = useRouter()
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -61,6 +64,10 @@ const Header = () => {
               <MdOutlineDarkMode className="h-10 w-10" onClick={handlebgdark} />
             )}
             <Logout />
+            
+            <div>
+              
+            </div>
           </div>
         </div>
         <div className="text-center my-8">

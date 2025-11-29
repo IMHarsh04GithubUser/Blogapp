@@ -12,7 +12,7 @@ const page = () => {
         title:"",
         description:"",
         category:"Startup",
-        author:"Alex Bennett",
+        author:"Harsh Mathur",
         authorImg:"/author_img.png"
     })
 
@@ -40,7 +40,7 @@ const page = () => {
               title:"",
               description:"",
               category:"Startup",
-              author:"Alex Bennett",
+              author:"Harsh Mathur",
               authorImg:"/author_img.png"
             });
         }

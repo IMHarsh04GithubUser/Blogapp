@@ -8,7 +8,7 @@ import { ThemeContext } from "../app/ThemeContext";
 import "@/Styles/header.css";
 
 const BlogItem = ({ title, description, category, image, id }) => {
-  const { dark, handlebgdark, handlebglight } = useContext(ThemeContext);
+  const { dark} = useContext(ThemeContext);
 
   return (
     <div
