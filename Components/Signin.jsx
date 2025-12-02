@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import "./signin.css";
 import Login from "./Login";
-import axios from "axios";
 import { toast } from "react-toastify";
 
 
