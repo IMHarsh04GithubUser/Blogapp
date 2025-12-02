@@ -5,6 +5,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 
+
 const page = () => {
 
     const [image,setImage] = useState(false);
