@@ -12,18 +12,16 @@
 }
 
 .catchy-text-header{
-    animation-name: animate-text;
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    transition: transform ease-in-out 0.8s;
+    text-align: center;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
 }
 
-@keyframes animate-text {
+/* @keyframes animate-text {
     0%{transform: translateX(10%);}
     100%{transform: translateX(-10%);}
-}
+} */
 
 .shadow-text-blog{
     animation-name: glowtext;
