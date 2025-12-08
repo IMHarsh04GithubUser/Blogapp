@@ -23,12 +23,12 @@ const Login = () => {
       const response = await axios.post("/api/auth/login", { email, password });
 
       if (response.status === 200) {
-        toast.success(response.data?.message || "Login Successful"); 
-        console.log(response?.data?.user)       
+        toast.success(response.data?.message || "Login Successful");
+        console.log(response?.data?.user);
         router.push("/dashboard");
         return;
       }
-      
+
       toast.error(response.data?.error || "Login failed");
     } catch (error) {
       toast.error(error?.response?.data?.error || "Error in Login");
@@ -75,21 +75,11 @@ const Login = () => {
             </div>
           </div>
 
-          <button type="submit" className="sign">Sign in</button>
+          <button type="submit" className="sign">
+            Sign in
+          </button>
         </form>
-
-        <div className="social-message">
-          <div className="line"></div>
-          <p className="message">Login with social accounts</p>
-          <div className="line"></div>
-        </div>
-
-        <div className="social-icons">
-          <button type="button" aria-label="Log in with Google" className="icon">...</button>
-          <button type="button" aria-label="Log in with Twitter" className="icon">...</button>
-          <button type="button" aria-label="Log in with GitHub" className="icon">...</button>
-        </div>
-
+        <br />
         <p className="signup">
           Don't have an account?
           <a
