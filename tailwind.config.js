@@ -5,7 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx}',
-  ],
+  ],safelist: ['bg-red-500','text-xl', /^btn-/],
   theme: {
     extend: {
       backgroundImage: {
