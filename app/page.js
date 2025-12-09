@@ -7,7 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Signin from "../Components/Signin";
 import Login from "../Components/Login";
 import './globals.css'
-export default function MyApp({ Component, pageProps }) { return <Component {...pageProps} />; }
 
 
 export default function Home() {
