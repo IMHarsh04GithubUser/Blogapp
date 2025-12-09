@@ -12,7 +12,7 @@ import { ThemeContext } from "../../ThemeContext";
 import { CiLight } from "react-icons/ci";
 import { MdOutlineDarkMode } from "react-icons/md";
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const { dark, handlebgdark, handlebglight } = useContext(ThemeContext);
   const [data, setData] = useState(null);
 
@@ -121,4 +121,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;
